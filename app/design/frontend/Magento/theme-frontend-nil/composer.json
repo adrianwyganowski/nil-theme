@@ -1,6 +1,6 @@
 {
     "name": "magento/theme-frontend-nil",
-    "description": "N/A",
+    "description": "Magento theme",
     "config": {
         "sort-packages": true
     },
