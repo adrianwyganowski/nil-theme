@@ -1,0 +1,56 @@
+//
+//  Common 
+//  ---------------------------------------------
+//
+//  & when (@media-common = true) {
+    
+
+// }
+
+//
+//  Desktop 
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    //
+    //  Header links
+    //  ---------------------------------------------
+    
+    .block-search .control{
+        padding: 0px 0px 0px;
+    }
+
+    .header.panel > .header.links{
+        display: flex;
+        align-items: center;
+    }
+
+    //
+    //  Header content
+    //  ---------------------------------------------
+    
+    .header.content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .logo {
+            margin: 0px;
+        }
+
+        .nav-sections{
+            margin: 0px;
+        }
+    }
+
+}
+
+//
+//  Mobile and tablets
+//  ---------------------------------------------
+
+// .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    
+
+// }

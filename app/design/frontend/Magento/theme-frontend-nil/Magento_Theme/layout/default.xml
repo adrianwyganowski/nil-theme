@@ -14,7 +14,8 @@
                 <argument name="logo_alt" xsi:type="string">Nil logo</argument>
             </arguments>
         </referenceBlock>
-        <referenceBlock name="advanced-search-link" remove="true"/>  
+        <referenceBlock name="advanced-search-link" remove="true"/> 
+        <referenceBlock name="header" remove="true"/>
 
         <move element="top.search" destination="top.links"  after="-" />
         <move element="navigation.sections" destination="header-wrapper"  after="logo" />
