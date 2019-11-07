@@ -7,6 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!-- Header layout modifications -->
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_img_width" xsi:type="number">60</argument>
@@ -19,7 +20,125 @@
 
         <move element="top.search" destination="top.links"  after="-" />
         <move element="navigation.sections" destination="header-wrapper"  after="logo" />
-        <move element="minicart" destination="header-wrapper"  after="-" />
+        <move element="minicart" destination="header-wrapper"  after="-" /> 
+        
+        <!-- Footer layout modifications -->
+        
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="contact-us-link" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/> <!-- set remove to false to check links to use them again !-->
+        
+        <referenceContainer name="footer">
+            <container name="customer.service.container" label="Custom service container" htmlTag="div" htmlClass="footer__customLinksContainer" before="-"/>
+            <container name="company.info.container" label="Company info container" htmlTag="div" htmlClass="footer__customLinksContainer" 
+            after="customer.service.container"/>
+            <container name="form.subscribe.container" label="From subscribe container" htmlTag="div" htmlClass="footer__customLinksContainer" 
+            after="company.info.container"/>
+        </referenceContainer>
+
+        <move element="form.subscribe" destination="form.subscribe.container" before="-"/> 
+        
+        <referenceContainer name="customer.service.container">
+            <container name="customer.service.title.container" >
+                <block class="Magento\Framework\View\Element\Text" name="customer.service.title.block">
+                    <arguments>
+                        <argument name="text" xsi:type="string">Customer Service</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="customer.service.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer__customLinksContainer--link</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="customer.service.links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.shipping">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Shipping</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.FAQ">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">FAQ</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.returns">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Returns and Exchanges</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.instore.pickup">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">In-Store Pickup</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        
+
+
+        <referenceContainer name="company.info.container">
+            <container name="company.info.title.container" >
+                <block class="Magento\Framework\View\Element\Text" name="company.info.title.block">
+                    <arguments>
+                        <argument name="text" xsi:type="string">Company Info</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="company.info.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer__customLinksContainer--link</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="company.info.links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="company.info.link.about.us">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">About Us</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.Locations">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Locations</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.careers">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Careers</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+             <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.Contact">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer.service.link.instore.blog">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Blog</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+              
+
+      
+        
+        
+
+        
 
     </body>
 </page>
