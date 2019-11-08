@@ -37,7 +37,7 @@
             after="company.info.container"/>
         </referenceContainer>
 
-        <move element="form.subscribe" destination="form.subscribe.container" before="-"/> 
+        
         
         <referenceContainer name="customer.service.container">
             <container name="customer.service.title.container" >
@@ -49,7 +49,7 @@
             </container>
             <block class="Magento\Framework\View\Element\Html\Links" name="customer.service.links">
                 <arguments>
-                    <argument name="css_class" xsi:type="string">footer__customLinksContainer--link</argument>
+                    <argument name="css_class" xsi:type="string">footer__customLinksContainer--links</argument>
                 </arguments>
             </block>
         </referenceContainer>
@@ -94,7 +94,7 @@
             </container>
             <block class="Magento\Framework\View\Element\Html\Links" name="company.info.links">
                 <arguments>
-                    <argument name="css_class" xsi:type="string">footer__customLinksContainer--link</argument>
+                    <argument name="css_class" xsi:type="string">footer__customLinksContainer--links</argument>
                 </arguments>
             </block>
         </referenceContainer>
