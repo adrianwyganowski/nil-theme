@@ -8,6 +8,32 @@
 // }
 
 //
+//  Mobile and tablets
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    
+    //
+    //  Footer content
+    //  ---------------------------------------------
+
+    .footer.content{
+        display: flex;
+        flex-direction: column;
+
+        .footer__customLinksContainer{
+            font-size: 2rem;
+            margin-bottom: 10px; 
+        }
+
+        .footer__customLinksContainer--links{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+
+//
 //  Desktop 
 //  ---------------------------------------------
 
@@ -62,31 +88,5 @@
 
     }
 
-
 }
 
-//
-//  Mobile and tablets
-//  ---------------------------------------------
-
- .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-    
-    //
-    //  Footer content
-    //  ---------------------------------------------
-
-    .footer.content{
-        display: flex;
-        flex-direction: column;
-
-    
-        .footer__customLinksContainer{
-            font-size: 2rem;
-            margin-bottom: 10px; 
-        }
-        .footer__customLinksContainer--links{
-            font-size: 1.4rem;
-        }
-
-    }
-}

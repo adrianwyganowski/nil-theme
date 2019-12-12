@@ -27,18 +27,16 @@
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="copyright" remove="true"/>
         <referenceBlock name="contact-us-link" remove="true"/>
-        <referenceBlock name="footer_links" remove="true"/> <!-- set remove to false to check links to use them again !-->
+        <referenceBlock name="footer_links" remove="true"/> 
         
         <referenceContainer name="footer">
             <container name="customer.service.container" label="Custom service container" htmlTag="div" htmlClass="footer__customLinksContainer" before="-"/>
             <container name="company.info.container" label="Company info container" htmlTag="div" htmlClass="footer__customLinksContainer" 
             after="customer.service.container"/>
-            <container name="form.subscribe.container" label="From subscribe container" htmlTag="div" htmlClass="footer__customLinksContainer" 
+            <container name="form.subscribe.container" label="Form subscribe container" htmlTag="div" htmlClass="footer__customLinksContainer" 
             after="company.info.container"/>
         </referenceContainer>
 
-        
-        
         <referenceContainer name="customer.service.container">
             <container name="customer.service.title.container" >
                 <block class="Magento\Framework\View\Element\Text" name="customer.service.title.block">
@@ -80,9 +78,6 @@
                 </arguments>
             </block>
         </referenceBlock>
-
-        
-
 
         <referenceContainer name="company.info.container">
             <container name="company.info.title.container" >
@@ -131,14 +126,6 @@
                 </arguments>
             </block>
         </referenceBlock>
-
-              
-
-      
-        
-        
-
-        
 
     </body>
 </page>

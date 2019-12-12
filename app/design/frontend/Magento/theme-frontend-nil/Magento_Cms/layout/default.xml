@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="content">
+            <container name="content.main.page.first.banner" label="Main page first banner" htmlTag="div" />
+            <container name="best.selling.items.header" label="Main page header for best selling" htmlTag="div" htmlClass="headerText" after="content.main.page.first.banner"/>
+            <container name="best.selling.items.catalog" label="Main page catalog for best selling" htmlTag="div" htmlClass="MainPage__productPreview" after="best.selling.items.header"/>
+        </referenceBlock>
+
+        <referenceContainer name="best.selling.items.header"> 
+            <block class="Magento\Framework\View\Element\Text" name="best.selling.items.header.text">
+                <arguments>
+                    <argument name="text" xsi:type="string">Best selling:</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

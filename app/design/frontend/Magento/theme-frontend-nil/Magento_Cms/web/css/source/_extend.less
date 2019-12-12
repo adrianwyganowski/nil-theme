@@ -1,0 +1,55 @@
+//
+//  Common 
+//  ---------------------------------------------
+//
+& when (@media-common = true) {
+    
+    .mainpageFirstBanner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+        height: 494px;
+        margin-top:3rem;
+
+        background-image: url(../images/main-page-first-banner.jpg);
+
+        color:  @color-white;
+
+        .mainPageFirstBanner__content{
+            border: 3px solid @color-white;
+
+            .mainPageFirstBanner__content--title{
+                text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+
+                font-size: 15rem;
+            }
+
+            .mainPageFirstBanner__content--info{
+                margin-left: 1rem;
+
+                text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+                
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .headerText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:3rem;
+
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .headerText:after{
+        content: "";
+        border-bottom: 1px solid @color-black;
+        display:block;
+        width: 30%; 
+    }
+
+}
