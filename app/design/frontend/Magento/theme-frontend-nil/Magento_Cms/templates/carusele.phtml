@@ -1,0 +1,31 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */?>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('Magento_Cms::css/tiny-slider.css')?>">
+
+<div class="mainpageCarusele">
+
+    <div class="my-slider">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+</div>
+
+<script>
+    (function  () {
+        require(["tns"],function() {
+            var slider = tns({
+                container: '.my-slider',
+                items: 3,
+                nav: false,
+                controlsText: ["<",">"],
+                autoHeight:true,
+
+            });
+        });
+    })();
+</script>

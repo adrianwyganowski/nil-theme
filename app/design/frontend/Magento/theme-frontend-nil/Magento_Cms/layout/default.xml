@@ -9,16 +9,11 @@
     <body>
         <referenceBlock name="content">
             <container name="content.main.page.first.banner" label="Main page first banner" htmlTag="div" />
-            <container name="best.selling.items.header" label="Main page header for best selling" htmlTag="div" htmlClass="headerText" after="content.main.page.first.banner"/>
-            <container name="best.selling.items.catalog" label="Main page catalog for best selling" htmlTag="div" htmlClass="MainPage__productPreview" after="best.selling.items.header"/>
+            <container name="content.main.page.carusele" label="Main page carusele" htmlTag="div"/>
         </referenceBlock>
 
-        <referenceContainer name="best.selling.items.header"> 
-            <block class="Magento\Framework\View\Element\Text" name="best.selling.items.header.text">
-                <arguments>
-                    <argument name="text" xsi:type="string">Best selling:</argument>
-                </arguments>
-            </block>
+        <referenceContainer name="content.main.page.carusele">
+             <block class="Magento\Framework\View\Element\Template" name="carosuele.content" template="Magento_Cms::carusele.phtml" />
         </referenceContainer>
     </body>
 </page>
