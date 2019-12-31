@@ -5,12 +5,25 @@
 <div class="mainpageCarusele">
 
     <div class="my-slider">
-        <div>1</div>
-        <div>2</div>
+        <div>
+            <div class="firstBanner">
+                <div class="firstBanner__content">
+                    <div class="firstBanner__content--title">
+                        Sale
+                    </div>
+                    <div class="firstBanner__content--info">
+                        UP TO 70%
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div>
+            <a href="#">
+                <div>The best clothes and accessories on the web</div>
+            </a>
+        </div>
         <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
     </div>
 
 </div>
@@ -20,7 +33,7 @@
         require(["tns"],function() {
             var slider = tns({
                 container: '.my-slider',
-                items: 3,
+                items: 1,
                 nav: false,
                 controlsText: ["<",">"],
                 autoHeight:true,
