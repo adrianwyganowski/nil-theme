@@ -25,7 +25,6 @@
 
     .mainpageCarusele{
 
-
         button{
             background: unset;
             border: unset;
@@ -48,18 +47,6 @@
             height: 500px;
         }
 
-        .tns-controls{
-            position: relative;
-            top:250px;
-            
-            z-index: 2;
-            display: flex;
-            
-          
-            align-items: center;
-            justify-content: space-between;
-
-        }
 
         #tns1-item0{
             .firstBanner{
@@ -108,14 +95,12 @@
                 text-align: center;
 
                 .secondBanner__title{
-                    font-size: 4.5rem;
                     font-weight: 700;
                     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
                 }
 
                 .secondBanner__buttonsContaner{
                     display: flex;
-                    flex-direction: row;
                     justify-content: center;
                 }
 
@@ -147,6 +132,7 @@
 
         #tns1-item2{
             background-image: url(../images/third-slide-in-slider.jpg);
+            background-position: right;
 
             .thirdBanner{
                 color:@color-white;
@@ -154,8 +140,6 @@
                 .thirdBannerContent{
                     display: flex;
                     flex-direction: column;     
-                    padding: 170px 0 0 200px;
-                    width: 30%;
 
                     .thirdBannerContent__title{
                         width: 100%;
@@ -184,24 +168,67 @@
 //  Mobile and tablets
 //  ---------------------------------------------
 
-// .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
-//     .mainpageCarusele{
+    .mainpageCarusele{
 
-//         .tns-controls{
-//             display: none;
-//         }
+        .tns-controls{
+            display: none;
+        }
 
-//         .secondBanner__buttonsContaner{
-//             flex-direction: column;
-//         }
-//     }
-// }
+        .secondBanner__buttonsContaner{
+            flex-direction: column;
+        }
+        .secondBanner__title{
+            font-size: 3rem;
+        }
+
+        .thirdBannerContent{
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+            padding: 170px 10px 0;
+            width: 90%;
+        }
+    }
+}
 
 //
 //  Desktop 
 //  ---------------------------------------------
 
-// .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    
+    .mainpageCarusele{
+        
+        .tns-controls{
+            position: relative;
+            top:250px;
+            
+            z-index: 2;
+            display: flex;
+            
+            align-items: center;
+            justify-content: space-between;
+        }
 
-// }
+        .secondBanner__title{
+            font-size: 4.5rem;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    
+    .mainpageCarusele{
+        
+        .secondBanner__buttonsContaner{
+            flex-direction: row;
+        }
+
+        .thirdBannerContent{    
+            text-shadow: unset;
+            padding: 170px 0 0 200px;
+            width: 30%;
+        }
+    }
+
+}
