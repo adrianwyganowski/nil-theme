@@ -1,5 +1,5 @@
 var config = {
     paths: {            
-            'tns': "Magento_Cms/js/tiny-slider"
+            'tns': "js/tiny-slider"
         },   
 };
