@@ -3,26 +3,11 @@
 //  ---------------------------------------------
 //
 & when (@media-common = true) {
+
+    //
+    //  Carusele
+    //  ---------------------------------------------
     
-    .block-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top:3rem;
-    }
-
-    .block-title strong{
-        font-size: 4rem !important;
-        text-align: center;
-    }
-
-    .block-title:after{
-        content: "";
-        border-bottom: 1px solid @color-black;
-        display:block;
-        width: 30%; 
-    }
-
     .mainpageCarusele{
 
         button{
@@ -160,6 +145,72 @@
             }
         }
     }
+
+    //
+    //  Promo blocks
+    //  ---------------------------------------------
+
+    .promoBlocks{
+        
+        .firstPromoBlock{
+            display: flex;
+           // flex-direction: row; // to change with media q
+            width: 100%;
+
+            .firstPromoBlock__content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .firstPromoBlock__content--text{
+                    margin: 20px 0; 
+
+                    font-size: 3rem;
+                }
+                
+                .firstPromoBlock__content--plus{
+                    margin:0; 
+                }
+            }
+            .firstPromoBlock__photo{
+                height: 420px;
+                background-image: url(../images/first-promo-photo.jpg);
+                background-position: center;
+            }
+        }
+
+        .secondPromoBlock{
+            display: flex;
+            // flex-direction: row; // to change with media q
+            width: 100%;
+
+            .secondPromoBlock__content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                .secondPromoBlock__content--info{
+                    font-size: 2rem
+                }
+
+                .secondPromoBlock__content--text{
+                    font-size: 5rem;
+                    
+                }
+            }
+            .secondPromoBlock__photo{
+                height: 420px;
+                background-image: url(../images/second-promo-photo.jpg);
+                background-position: center;
+            }
+        }
+    }
+
+
 }
 
 //
@@ -186,6 +237,35 @@
             text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
             padding: 170px 10px 0;
             width: 90%;
+        
+        }
+        
+    }
+
+    .promoBlocks{
+        
+        .firstPromoBlock{
+            flex-direction: column-reverse;
+
+            .firstPromoBlock__content{
+                width: 100%;
+            }
+
+            .firstPromoBlock__photo{
+                width: 100%;
+            }
+        }
+
+        .secondPromoBlock{
+             flex-direction: column;
+
+             .secondPromoBlock__content{
+                width: 100%;
+            }
+
+            .secondPromoBlock__photo{
+                width: 100%;
+            }
         }
     }
 }
@@ -233,6 +313,35 @@
             text-shadow: unset;
             padding: 170px 0 0 200px;
             width: 30%;
+        }
+    }
+
+    .promoBlocks{
+        
+        .firstPromoBlock{
+            flex-direction: row;
+
+            .firstPromoBlock__content{
+                width: 50%;
+            }
+
+            .firstPromoBlock__photo{
+                width: 50%;
+            }
+
+            
+        }
+
+        .secondPromoBlock{
+             flex-direction: row;
+
+             .secondPromoBlock__content{
+                width: 50%;
+            }
+
+            .secondPromoBlock__photo{
+                width: 50%;
+            }
         }
     }
 
