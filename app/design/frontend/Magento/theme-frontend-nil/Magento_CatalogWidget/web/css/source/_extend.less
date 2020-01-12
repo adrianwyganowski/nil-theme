@@ -74,28 +74,21 @@
 //
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-
-    .block-products-list{
-        
+  
         .block-title:after{
             width: 90%; 
         }
-    }
 }        
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {        
    
-    .block-products-list{
-        
         .block-title:after{
             width: 70%; 
         }
 
         .tns-controls{
             display: none;
-        }
-    }
-    
+        }    
 }
 
 //
@@ -103,20 +96,13 @@
 //  ---------------------------------------------
 //
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    
 
-    .block-products-list{
-        
         .block-title:after{
             width: 50%; 
         }
-    }
-    
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-   
-    .block-products-list{
         
         .block-title:after{
             width: 30%; 
@@ -132,7 +118,6 @@
             align-items: center;
             justify-content: space-between;
         }
-    }
 }
 
 
