@@ -4,24 +4,41 @@
 //
 & when (@media-common = true) {
 
-    .filter-options-item{
-        border-bottom: 1px solid black;
-        padding: 1rem 0;
-        transition: height 0.3s;
-
-        
-        .filter-options-title{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0;
-                    
-            cursor: pointer;
-        }
+    .filter-options{
     
-        .filer-options-span{
-            font-weight: 300;
+        .filter-options-container{
+            max-height: 4rem;
+            overflow: hidden;
+            border-bottom: 1px solid @color-gray-middle3;
+
+            transition:  max-height 1s;
+
+            .filter-options-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                padding: 1rem 0;
+
+                font-size: 1.3rem;
+                        
+                cursor: pointer;
+            }
+        
+            .filer-options-span{
+                font-weight: 300;
+                font-size: 2.3rem;
+            }
+
+            .filter-options-content{
+                padding-left: 0.5rem;
+            }
         }
+
+        .collapsed{
+            max-height: 50rem;
+        }
+
     }
 
     
