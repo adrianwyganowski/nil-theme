@@ -1,0 +1,49 @@
+//
+//  Common 
+//  ---------------------------------------------
+//
+& when (@media-common = true) {
+    
+    .products{
+
+        .product-item{
+            height: 355px;
+            overflow: hidden;
+
+            .product-image-container{
+                transition: opacity 0.2s;
+            }
+            .product-item-details{
+                position: relative;
+                z-index: 2;
+                bottom: 0;
+                transition: bottom 0.4s;
+            }
+            .product-item-on-hover-layer{
+                position: relative;
+                z-index: 2;
+                bottom: 0;
+                transition: bottom 0.4s;
+            }
+            .price-label{
+                display: none;
+            }
+        }
+    }
+
+    .products{
+        .product-item:hover {
+            .product-image-container{
+                opacity: 0.4;
+            }
+            .product-item-details{
+                bottom:250px;
+            }
+            .product-item-on-hover-layer{
+                bottom: 250px;
+            }
+        }
+    }
+
+    
+}
