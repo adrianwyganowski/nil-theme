@@ -17,12 +17,14 @@
                 position: relative;
                 z-index: 2;
                 bottom: 0;
+
                 transition: bottom 0.4s;
             }
             .product-item-on-hover-layer{
                 position: relative;
                 z-index: 2;
                 bottom: 0;
+
                 transition: bottom 0.4s;
             }
             .price-label{
@@ -32,7 +34,9 @@
     }
 
     .products-catalog{
+        
         .product-item:hover {
+
             .product-image-container{
                 opacity: 0.4;
             }
@@ -45,5 +49,30 @@
         }
     }
 
+    .product-info-main{
+        
+        .product-info-stock-sku{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-and-wishlist-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .add-to-wishlist-heart{
+                font-size: 1.5rem;
+            }
+            span:hover{
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: none;
+
+            }
+        }
+    }
     
 }
