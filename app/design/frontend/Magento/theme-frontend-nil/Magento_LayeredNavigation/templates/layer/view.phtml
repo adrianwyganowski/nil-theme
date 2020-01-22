@@ -23,17 +23,17 @@
                 </div>
             <?php endif; ?>
             <?php $wrapOptions = false; ?>
-            <?php $index = 0; ?>  <!-- MY PHP CODE -->
+            <?php $index = 0; ?>  
             <?php foreach ($block->getFilters() as $filter) : ?>
-                <?php $index++ ?> <!-- MY PHP CODE -->
+                <?php $index++ ?> 
                 <?php if (!$wrapOptions) : ?>
                     <dl class="filter-options" id="narrow-by-list">
                     <?php $wrapOptions = true;
                 endif; ?>
                     <?php if ($filter->getItemsCount()) : ?>
-                        <div class="filter-options-container" id="item-number<?= $block->escapeHtmlAttr($index) ?>" onClick="changeSpanInFilterOptions(this);"> <!-- MY PHP CODE -->
+                        <div class="filter-options-container" id="item-number<?= $block->escapeHtmlAttr($index) ?>" onClick="unfoldNavMenuItem(this);"> 
                             <div role="heading" aria-level="3" class="filter-options-title"><?= $block->escapeHtml(__($filter->getName())) ?>
-                                <span class="filer-options-span" id="item-number-span<?= $block->escapeHtmlAttr($index) ?>">+</span><!-- MY PHP CODE -->
+                                <span class="filer-options-span" id="item-number-span<?= $block->escapeHtmlAttr($index) ?>">+</span>
                             </div>
                             <div class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
                         </div>
@@ -48,10 +48,9 @@
 
 
 <script>
-function changeSpanInFilterOptions(element){
+function unfoldNavMenuItem(element){
     const numberOfOptionsItem = element.id.replace(/\D/g, "");
     const spanOfOptionsItem = document.getElementById(`item-number-span${numberOfOptionsItem}`);
-    console.log(spanOfOptionsItem);
     if (spanOfOptionsItem.innerHTML === "+")
     {
         spanOfOptionsItem.innerHTML = '-';

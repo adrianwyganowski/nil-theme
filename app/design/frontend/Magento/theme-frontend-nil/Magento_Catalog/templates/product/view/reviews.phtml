@@ -22,13 +22,9 @@
                 <?php if ($alias == "reviews") :?>
                     <div class="data item title"
                         data-role="collapsible" id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>">
-                        <a class="data switch"
-                        tabindex="-1"
-                        data-toggle="trigger"
-                        href="#<?= $block->escapeUrl($alias) ?>"
-                        id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title">
+                        <div class="data switch">
                             <?= /* @noEscape */ $label ?>
-                        </a>
+                    </div>
                     </div>
                     <div class="data item content"
                         aria-labelledby="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title" id="<?= $block->escapeHtmlAttr($alias) ?>" data-role="content">
@@ -39,3 +35,30 @@
         </div>
     </div>
 <?php endif; ?>
+
+<script>
+    //  I know that PHP will suit better for this purpose but I can't do it in it
+    (() =>{
+        let i = 0
+
+        let reviewsInterval= setInterval (() => {
+            const reviewContainer = document.getElementById("product-review-container");
+            if (reviewContainer.innerHTML === "")
+            {
+                reviewContainer.innerHTML = 
+                `<div class="no-reviews"> 
+                    <p class="no-reviews-info">We don't have any reviews</p>
+                    <p class="no-reviews-info">Leave Yours</p>
+                    <p id="reviews-arrow">&#8680;</p>
+
+                </div>`
+            }
+            // I think that 15 sec should be enough to load comments
+            if (++i === 15 ){
+                window.clearInterval(reviewsInterval);
+            }    
+        },1000);
+    })();
+
+</script>
+

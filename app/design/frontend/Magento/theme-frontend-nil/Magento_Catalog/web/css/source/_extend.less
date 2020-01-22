@@ -51,6 +51,13 @@
 
     .product-info-main{
         
+        .page-title-wrapper{
+            margin-bottom: 0px;
+            .page-title{
+                margin-bottom: 0px;
+            }
+        }
+
         .product-info-stock-sku{
             display: flex;
             justify-content: space-between;
@@ -73,6 +80,138 @@
 
             }
         }
+
+        .productInfoContainer{
+            max-height: 2.5rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid @color-gray-middle3;
+
+            transition:  max-height 0.7s;
+            cursor: pointer;
+            .productInfoContainer__header{
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            
+            }
+
+            .productInfoContainer__info{
+                text-align: justify;
+            }
+        }
+        .collapsed{
+            max-height: 25rem;
+        }
+    }
+    .product.data.items{
+
+        #tab-label-reviews{
+            padding: 0;
+            border: none;
+            background: unset;
+
+            .data.switch{
+                border: unset;
+                background: unset;
+            }
+        }
+        
+        .data.item.content{
+            display: flex;
+        }
+
+        .item.review-item{
+            margin-right: 20px;
+
+            .review-content{
+                margin-left: 150px;
+                text-align: justify; 
+            }
+
+            .review-details{
+                margin:  20px 20px 0 150px;
+            }
+        }
+
+        .toolbar.review-toolbar{
+            border: none;
+        }
+
+        .no-reviews{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .no-reviews-info{
+                font-size: 2.5rem;
+            }
+
+            #reviews-arrow{
+                font-size: 5rem;
+            }
+        }
+
+        .block-content{
+            padding-left: 30px;
+        }
     }
     
+}
+
+//
+//  Mobile and tablets
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .product.data.items{
+        
+        .data.item.content{
+            flex-direction: column;
+            
+            #product-review-container{
+                width: 100%;
+            }
+            .block.review-add{
+                width: 100%;
+            }
+
+            #reviews-arrow{
+                display: none;
+            }
+        }
+    }
+}
+
+//
+//  Desktop 
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product.data.items{
+        
+        .data.item.content{
+            flex-direction: row;
+            height: 480px;
+
+            #product-review-container{
+                width: 50%;
+                height: 480px;
+                overflow-y: auto;
+            }
+
+            .block.review-add{
+                width: 50%;
+            }
+
+            #reviews-arrow{
+                display: unset;
+            }
+        }
+    }
+
 }

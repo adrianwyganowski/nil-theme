@@ -15,7 +15,7 @@ $urlForm = $block->getReviewsUrl() . '#review-form';
         <?php if ($rating) :?>
         <div class="rating-summary">
             <a class="action view"
-               href="<?= $block->escapeUrl($urlForm) ?>">
+               href="#reviews">
                 <span class="label"><span><?= $block->escapeHtml(__('Rating')) ?>:</span></span>
                 <div class="rating-result" title="<?= $block->escapeHtmlAttr($rating); ?>%">
                     <span style="width:<?= $block->escapeHtmlAttr($rating); ?>%">
@@ -29,7 +29,7 @@ $urlForm = $block->getReviewsUrl() . '#review-form';
         <?php endif;?>
         <div class="reviews-actions">
             <a class="action view"
-               href="<?= $block->escapeUrl($urlForm) ?>">
+               href="#reviews">
                 <span itemprop="reviewCount">(<?= $block->escapeHtml($block->getReviewsCount()) ?>)</span>&nbsp;
             </a>
         </div>
