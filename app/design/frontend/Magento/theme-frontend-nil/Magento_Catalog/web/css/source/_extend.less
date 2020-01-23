@@ -9,6 +9,9 @@
         .product-item{
             height: 355px;
             overflow: hidden;
+            text-align: center;
+
+            color: @color-black;
 
             .product-image-container{
                 transition: opacity 0.2s;
@@ -19,33 +22,75 @@
                 bottom: 0;
 
                 transition: bottom 0.4s;
+
+                .product-item-name{
+                    margin: 0;
+                    
+                    color: @color-black;
+
+                    transition: font-size 0.4s;
+                }
+                a:hover{
+                    text-decoration: none;
+                }
             }
+
             .product-item-on-hover-layer{
                 position: relative;
                 z-index: 2;
                 bottom: 0;
 
                 transition: bottom 0.4s;
-            }
-            .price-label{
-                display: none;
+
+                .normal-price{
+                    color: @color-black;
+                    
+                    .price-label{
+                        display: none;
+                    }
+                    
+                }
+
+                .product-label-link-container{
+                    color: @color-black;
+                    display: flex;
+                    justify-content: center;
+
+                    .product-label-link{
+                        width: 40%; 
+                        border: 2px solid @color-black;
+                        
+                        font-weight: 700;
+                        font-size: 1.5rem;
+
+                        p{
+                            margin: 0;
+                        }
+                    }
+                }
             }
         }
-    }
-
-    .products-catalog{
         
         .product-item:hover {
+            a{
+                text-decoration: none;
+            }
+
+            .product-item-name{
+                font-size: 1.8rem;
+            }
 
             .product-image-container{
                 opacity: 0.4;
             }
-            .product-item-details{
-                bottom:250px;
-            }
-            .product-item-on-hover-layer{
-                bottom: 250px;
-            }
+
+            // .product-item-details{
+            //     bottom:250px;
+            // }
+
+            // .product-item-on-hover-layer{
+            //     bottom: 250px;
+            // }
         }
     }
 
@@ -62,6 +107,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            color: @color-gray-middle2;
+            
+            font-size: 1rem;
         }
 
         .price-and-wishlist-container{
@@ -77,8 +126,16 @@
             }
             a:hover{
                 text-decoration: none;
-
             }
+            .price-label{
+                display: none;
+            }
+            .price{
+                font-size: 2.2rem;
+            }
+        }
+        .margin.price{
+            margin-top:20px;
         }
 
         .productInfoContainer{
@@ -168,6 +225,21 @@
 //  ---------------------------------------------
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .products-catalog{
+
+        .product-item:hover {
+    
+            .product-item-details{
+                bottom:0px;
+            }
+    
+            .product-item-on-hover-layer{
+                bottom: 0px;
+            }
+        }
+    }
+    
     .product.data.items{
         
         .data.item.content{
@@ -179,10 +251,13 @@
             .block.review-add{
                 width: 100%;
             }
-
-            #reviews-arrow{
-                display: none;
+            .no-reviews{
+                margin: 20px 0 30px;
+                #reviews-arrow{
+                    display: none;
+                }
             }
+            
         }
     }
 }
@@ -192,6 +267,21 @@
 //  ---------------------------------------------
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    
+    .products-catalog{
+
+        .product-item:hover {
+    
+            .product-item-details{
+                bottom:250px;
+            }
+    
+            .product-item-on-hover-layer{
+                bottom: 250px;
+            }
+        }
+    }
+
     .product.data.items{
         
         .data.item.content{
@@ -199,13 +289,13 @@
             height: 480px;
 
             #product-review-container{
-                width: 50%;
+                width: 60%;
                 height: 480px;
                 overflow-y: auto;
             }
 
             .block.review-add{
-                width: 50%;
+                width: 40%;
             }
 
             #reviews-arrow{

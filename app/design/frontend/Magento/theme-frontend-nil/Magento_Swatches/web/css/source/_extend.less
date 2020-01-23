@@ -1,0 +1,22 @@
+//
+//  Common 
+//  ---------------------------------------------
+//
+& when (@media-common = true) {
+
+    .swatch-attribute.size{
+        .swatch-option{
+            border: 1px solid black;
+
+            background: unset;
+            color: @color-black;
+        }
+    }
+
+    .swatch-attribute.color{
+        .swatch-option:hover{
+            outline: unset;
+            border: 1px solid @color-black;
+        }
+    }
+}

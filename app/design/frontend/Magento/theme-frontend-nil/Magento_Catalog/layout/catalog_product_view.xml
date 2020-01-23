@@ -57,8 +57,12 @@
             </container>
         </referenceContainer>
 
-         <!-- Changed template to display reviews below photo and informations of product -->
+        <!-- Changed template to display reviews below photo and informations of product -->
         <referenceBlock name="product.info.details" template="Magento_Catalog::product/view/reviews.phtml"/>
+
+        <!-- Deleted related products -->
+        <referenceBlock name="catalog.product.related" remove="true"/>
+
 
 
     </body>

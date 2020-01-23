@@ -76,8 +76,11 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                     <a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>">
                         <?= /* @noEscape */ $block->getProductPrice($_product) ?>
                         <?= $block->getProductDetailsHtml($_product) ?>
-                        <div class="product-span-link">
-                            <span>Check it</span>
+                        <div class="product-label-link-container">
+                            <div class="product-label-link">
+                                <p>CHECK</p>
+                                <p>IT</p>
+                            </div>
                         </div>
                     </a>   
                 </div>
