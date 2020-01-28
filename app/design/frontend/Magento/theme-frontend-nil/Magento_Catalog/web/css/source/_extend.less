@@ -7,7 +7,7 @@
     .products-catalog{
 
         .product-item{
-            height: 355px;
+            height: 375px;
             overflow: hidden;
             text-align: center;
 
@@ -42,13 +42,17 @@
 
                 transition: bottom 0.4s;
 
-                .normal-price{
-                    color: @color-black;
-                    
-                    .price-label{
-                        display: none;
+                .price-box {
+                    margin-bottom: 100px;
+
+                    .normal-price{
+                        color: @color-black;
+                        
+                        .price-label{
+                            display: none;
+                        }
+                        
                     }
-                    
                 }
 
                 .product-label-link-container{
@@ -84,13 +88,9 @@
                 opacity: 0.4;
             }
 
-            // .product-item-details{
-            //     bottom:250px;
-            // }
-
-            // .product-item-on-hover-layer{
-            //     bottom: 250px;
-            // }
+            .price-box{
+                margin-bottom: 25px; 
+            }
         }
     }
 
@@ -117,6 +117,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 1rem;
 
             .add-to-wishlist-heart{
                 font-size: 1.5rem;
@@ -130,9 +131,12 @@
             .price-label{
                 display: none;
             }
-            .price{
-                font-size: 2.2rem;
+            .price-wrapper{ 
+                .price{
+                    font-size: 3rem;
+                }
             }
+           
         }
         .margin.price{
             margin-top:20px;
